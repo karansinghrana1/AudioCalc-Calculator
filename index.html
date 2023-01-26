@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="sytle.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1><center><b><u>Simple Calculator With Sound Buttons</u></b></center></h1>
+    <div id="calculator">
+        <div id="display"></div>
+        <div class="button-row">
+          <button class="number" id="seven" onclick="playSound('7'); addToDisplay('7')">7</button>
+          <button class="number" id="eight" onclick="playSound('8'); addToDisplay('8')">8</button>
+          <button class="number" id="nine" onclick="playSound('9'); addToDisplay('9')">9</button>
+          <button class="operator" id="divide" onclick="playSound('divide'); addToDisplay('/')">/</button>
+        </div>
+        <div class="button-row">
+          <button class="number" id="four" onclick="playSound('4'); addToDisplay('4')">4</button>
+          <button class="number" id="five" onclick="playSound('5'); addToDisplay('5')">5</button>
+          <button class="number" id="six" onclick="playSound('6'); addToDisplay('6')">6</button>
+          <button class="operator" id="multiply" onclick="playSound('multiply'); addToDisplay('*')">*</button>
+        </div>
+        <div class="button-row">
+          <button class="number" id="one" onclick="playSound('1'); addToDisplay('1')">1</button>
+          <button class="number" id="two" onclick="playSound('2'); addToDisplay('2')">2</button>
+          <button class="number" id="three" onclick="playSound('3'); addToDisplay('3')">3</button>
+          <button class="operator" id="subtract" onclick="playSound('substract'); addToDisplay('-')">-</button>
+        </div>
+        <div class="button-row">
+          <button class="number" id="zero" onclick="playSound('0'); addToDisplay('0')">0</button>
+          <button class="operator" id="decimal" onclick="playSound('decimal'); addToDisplay('.')">.</button>
+          <button class="operator" id="equals" onclick="playSound('equals'); calculate()">=</button>
+          <button class="operator" id="add" onclick="playSound('add'); addToDisplay('+')">+</button>
+        </div>
+        <div class="button-row">
+          <button class="operator" id="clear" onclick="playSound('clear'); clearDisplay()">C</button>
+          <button class="operator" id="backspace" onclick="playSound('backspace'); backspace()">&#x8;</button>
+        </div>
+        <audio id="button-sound" src="button-press.mp3"></audio>
+      </div>
+      
+      
+    <script src="script.js"></script>  
+</body>
+</html>
